@@ -1,22 +1,19 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("com.google.devtools.ksp")
     id("kotlin-parcelize")
 }
 
 android {
-    namespace = "com.anisanurjanah.fahrameducationcourse"
+    namespace = "com.anisanurjanah.fahrameducationcourse.dependencies"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.anisanurjanah.fahrameducationcourse"
         minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -38,12 +35,24 @@ android {
     buildFeatures {
         viewBinding = true
     }
-    dynamicFeatures += setOf(":favorite")
 }
 
 dependencies {
-    implementation(project(":dependencies"))
-    implementation(project(":core"))
-    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-    implementation(libs.kotlin.stdlib.jdk7)
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
+
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation(libs.androidx.legacy.support.v4)
+    implementation(libs.androidx.cardview)
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.glide)
+
+    implementation(libs.koin.core)
+    implementation(libs.koin.android)
 }

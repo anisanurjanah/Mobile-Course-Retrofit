@@ -1,20 +1,16 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.dynamic.feature)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("com.google.devtools.ksp")
     id("kotlin-parcelize")
 }
 
 android {
-    namespace = "com.anisanurjanah.fahrameducationcourse"
+    namespace = "com.anisanurjanah.fahrameducationcourse.favorite"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.anisanurjanah.fahrameducationcourse"
         minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -38,10 +34,10 @@ android {
     buildFeatures {
         viewBinding = true
     }
-    dynamicFeatures += setOf(":favorite")
 }
 
 dependencies {
+    implementation(project(":app"))
     implementation(project(":dependencies"))
     implementation(project(":core"))
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
