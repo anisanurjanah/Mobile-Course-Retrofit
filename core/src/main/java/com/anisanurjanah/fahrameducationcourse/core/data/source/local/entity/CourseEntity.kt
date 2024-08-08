@@ -10,7 +10,7 @@ data class CourseEntity(
     @PrimaryKey
     @NonNull
     @ColumnInfo(name = "courseId")
-    var courseId: String,
+    var courseId: Int,
 
     @ColumnInfo(name = "title")
     var title: String,
@@ -34,13 +34,13 @@ data class CourseEntity(
     var slug: String,
 
     @ColumnInfo(name = "view")
-    var view: String,
+    var view: Int,
 
     @ColumnInfo(name = "level")
     var level: String,
 
     @ColumnInfo(name = "module")
-    var module: String,
+    var module: Int,
 
     @ColumnInfo(name = "publishedAt")
     var publishedAt: String,
