@@ -5,6 +5,10 @@ plugins {
     id("kotlin-parcelize")
 }
 
+apply{
+    from("../shared_dependencies.gradle")
+}
+
 android {
     namespace = "com.anisanurjanah.fahrameducationcourse.favorite"
     compileSdk = 34
@@ -38,8 +42,11 @@ android {
 
 dependencies {
     implementation(project(":app"))
-    implementation(project(":dependencies"))
     implementation(project(":core"))
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementation(libs.kotlin.stdlib.jdk7)
+    implementation(libs.androidx.legacy.support.v4)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.fragment.ktx)
 }
