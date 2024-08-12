@@ -4,8 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?attr/colorSecondaryVariant"
-    android:layout_margin="4dp"
     android:padding="8dp">
 
     <ImageView
@@ -41,7 +39,7 @@
         android:ellipsize="end"
         android:maxLines="2"
         android:text="@string/course"
-        android:textColor="?attr/colorOnSecondary"
+        android:textColor="?attr/colorOnPrimary"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/ivCourse"
         app:layout_constraintEnd_toEndOf="parent"

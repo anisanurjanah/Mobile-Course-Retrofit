@@ -2,8 +2,13 @@ package com.anisanurjanah.fahrameducationcourse.core.di
 
 import androidx.room.Room
 import com.anisanurjanah.fahrameducationcourse.core.BuildConfig
+import com.anisanurjanah.fahrameducationcourse.core.data.source.CourseRepository
+import com.anisanurjanah.fahrameducationcourse.core.data.source.local.LocalDataSource
 import com.anisanurjanah.fahrameducationcourse.core.data.source.local.room.CourseDatabase
+import com.anisanurjanah.fahrameducationcourse.core.data.source.remote.RemoteDataSource
 import com.anisanurjanah.fahrameducationcourse.core.data.source.remote.network.ApiService
+import com.anisanurjanah.fahrameducationcourse.core.domain.repository.ICourseRepository
+import com.anisanurjanah.fahrameducationcourse.core.utils.AppExecutors
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
@@ -37,5 +42,18 @@ val networkModule = module {
             .client(get())
             .build()
         retrofit.create(ApiService::class.java)
+    }
+}
+
+val repositoryModule = module {
+    single { LocalDataSource(get()) }
+    single { RemoteDataSource(get()) }
+    factory { AppExecutors() }
+    single<ICourseRepository> {
+        CourseRepository(
+            get(),
+            get(),
+            get()
+        )
     }
 }

@@ -1,6 +1,7 @@
 package com.anisanurjanah.fahrameducation
 
 import android.app.Application
+import com.anisanurjanah.fahrameducation.di.*
 import com.anisanurjanah.fahrameducationcourse.core.di.*
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -17,9 +18,9 @@ class MyApplication : Application() {
                 listOf(
                     databaseModule,
                     networkModule,
-//                    repositoryModule,
-//                    useCaseModule,
-//                    viewModelModule
+                    repositoryModule,
+                    useCaseModule,
+                    viewModelModule
                 )
             )
         }

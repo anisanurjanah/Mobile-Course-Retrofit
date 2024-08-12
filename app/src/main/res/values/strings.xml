@@ -10,4 +10,11 @@
 
     <string name="no_data">No data available.</string>
     <string name="something_wrong">Oops.. something went wrong</string>
+    <string name="article">Article</string>
+    <string name="teacher">Teacher</string>
+    <string name="path">Path</string>
+    <string name="slug">Slug</string>
+    <string name="view">View</string>
+    <string name="level">Level</string>
+    <string name="module">Module</string>
 </resources>
