@@ -1,4 +1,4 @@
-package com.anisanurjanah.fahrameducation.course.detail
+package com.anisanurjanah.fahrameducationcourse.course.detail
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -24,20 +24,9 @@ class DetailCourseActivity : AppCompatActivity() {
         @Suppress("DEPRECATION")
         val course = intent.getParcelableExtra<Course>(EXTRA_COURSE)
         course?.let {
-//            setupToolbar(it.title)
             setupCourseDetail(it)
         }
     }
-
-//    private fun setupToolbar(title: String) {
-//        with(binding) {
-//            supportActionBar?.title = title
-//            toolbar.setNavigationIcon(R.drawable.ic_arrow_back)
-//            toolbar.setNavigationOnClickListener {
-//                onBackPressedDispatcher.onBackPressed()
-//            }
-//        }
-//    }
 
     private fun setupCourseDetail(course: Course?) {
         course?.let {

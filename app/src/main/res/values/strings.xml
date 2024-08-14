@@ -17,4 +17,7 @@
     <string name="view">View</string>
     <string name="level">Level</string>
     <string name="module">Module</string>
+    <string name="coming_soon">Coming soon!</string>
+    <string name="task">Task</string>
+    <string name="login">Login</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.anisanurjanah.fahrameducation
+package com.anisanurjanah.fahrameducationcourse
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

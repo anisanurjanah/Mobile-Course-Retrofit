@@ -3,12 +3,15 @@ package com.anisanurjanah.fahrameducationcourse.core.data.source
 import com.anisanurjanah.fahrameducationcourse.core.data.source.local.LocalDataSource
 import com.anisanurjanah.fahrameducationcourse.core.data.source.remote.RemoteDataSource
 import com.anisanurjanah.fahrameducationcourse.core.data.source.remote.network.ApiResponse
-import com.anisanurjanah.fahrameducationcourse.core.data.source.remote.response.CourseItem
+import com.anisanurjanah.fahrameducationcourse.core.data.source.remote.response.article.ArticleItem
+import com.anisanurjanah.fahrameducationcourse.core.data.source.remote.response.course.CourseItem
+import com.anisanurjanah.fahrameducationcourse.core.domain.model.Article
 import com.anisanurjanah.fahrameducationcourse.core.domain.model.Course
 import com.anisanurjanah.fahrameducationcourse.core.domain.repository.ICourseRepository
 import com.anisanurjanah.fahrameducationcourse.core.utils.AppExecutors
 import com.anisanurjanah.fahrameducationcourse.core.utils.DataMapper
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.map
 
 class CourseRepository(
@@ -46,4 +49,18 @@ class CourseRepository(
         val courseEntity = DataMapper.mapDomainToEntity(course)
         appExecutors.diskIO().execute { localDataSource.setFavoriteCourse(courseEntity, state) }
     }
+
+    override fun getAllArticle(): Flow<Resource<List<Article>>> =
+        object : NetworkBoundResource<List<Article>, List<ArticleItem>>() {
+            override fun loadFromDB(): Flow<List<Article>> {
+                return flowOf(emptyList())
+            }
+
+            override fun shouldFetch(data: List<Article>?): Boolean = true
+
+            override suspend fun createCall(): Flow<ApiResponse<List<ArticleItem>>> =
+                remoteDataSource.getAllArticle()
+
+            override suspend fun saveCallResult(data: List<ArticleItem>) {}
+        }.asFlow()
 }

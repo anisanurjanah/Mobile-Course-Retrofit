@@ -1,4 +1,4 @@
-package com.anisanurjanah.fahrameducationcourse.core.data.source.remote.response
+package com.anisanurjanah.fahrameducationcourse.core.data.source.remote.response.course
 
 import com.google.gson.annotations.SerializedName
 

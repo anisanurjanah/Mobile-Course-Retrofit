@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_grey"
-    tools:context="com.anisanurjanah.fahrameducation.splashscreen.SplashScreenActivity">
+    tools:context="com.anisanurjanah.fahrameducationcourse.splashscreen.SplashScreenActivity">
 
     <ImageView
         android:id="@+id/imageLogo"

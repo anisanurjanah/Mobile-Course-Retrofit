@@ -1,4 +1,4 @@
-package com.anisanurjanah.fahrameducation
+package com.anisanurjanah.fahrameducationcourse
 
 import org.junit.Test
 

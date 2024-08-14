@@ -1,7 +1,9 @@
 package com.anisanurjanah.fahrameducationcourse.favorite
 
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.asLiveData
+import com.anisanurjanah.fahrameducationcourse.core.domain.usecase.CourseUseCase
 
-class FavoriteViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+class FavoriteViewModel(courseUseCase: CourseUseCase) : ViewModel() {
+    val favoriteCourse = courseUseCase.getFavoriteCourse().asLiveData()
 }

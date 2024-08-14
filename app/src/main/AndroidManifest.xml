@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.anisanurjanah.fahrameducationcourse" >
+    package="com.anisanurjanah.fahrameducationcourse">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="com.anisanurjanah.fahrameducation.MyApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,11 +14,14 @@
         android:roundIcon="@mipmap/ic_splash_screen_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FahramEducation"
-        tools:targetApi="31" >
+        tools:targetApi="31">
         <activity
-            android:name="com.anisanurjanah.fahrameducation.splashscreen.SplashScreenActivity"
+            android:name=".article.detail.DetailArticleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".splashscreen.SplashScreenActivity"
             android:exported="true"
-            android:theme="@style/Theme.FahramEducation.NoActionBar" >
+            android:theme="@style/Theme.FahramEducation.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,10 +29,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.anisanurjanah.fahrameducation.course.detail.DetailCourseActivity"
+            android:name=".course.detail.DetailCourseActivity"
             android:exported="false" />
         <activity
-            android:name="com.anisanurjanah.fahrameducation.MainActivity"
+            android:name=".MainActivity"
             android:exported="false"
             android:theme="@style/Theme.FahramEducation.NoActionBar" />
     </application>

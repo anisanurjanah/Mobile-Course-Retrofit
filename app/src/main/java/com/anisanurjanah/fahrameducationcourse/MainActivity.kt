@@ -1,19 +1,18 @@
-package com.anisanurjanah.fahrameducation
+package com.anisanurjanah.fahrameducationcourse
 
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
-import com.anisanurjanah.fahrameducation.article.ArticleFragment
-import com.anisanurjanah.fahrameducation.course.CourseFragment
-import com.anisanurjanah.fahrameducation.home.HomeFragment
-import com.anisanurjanah.fahrameducationcourse.R
+import com.anisanurjanah.fahrameducationcourse.course.CourseFragment
 import com.anisanurjanah.fahrameducationcourse.databinding.ActivityMainBinding
+import com.anisanurjanah.fahrameducationcourse.home.HomeFragment
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -84,9 +83,15 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 fragment = CourseFragment()
                 title = getString(R.string.course)
             }
+            R.id.nav_task -> {
+                Toast.makeText(this@MainActivity,
+                    getString(R.string.coming_soon), Toast.LENGTH_SHORT).show()
+            }
             R.id.nav_article -> {
-                fragment = ArticleFragment()
-                title = getString(R.string.article)
+//                fragment = ArticleFragment()
+//                title = getString(R.string.article)
+                Toast.makeText(this@MainActivity,
+                    getString(R.string.coming_soon), Toast.LENGTH_SHORT).show()
             }
         }
 

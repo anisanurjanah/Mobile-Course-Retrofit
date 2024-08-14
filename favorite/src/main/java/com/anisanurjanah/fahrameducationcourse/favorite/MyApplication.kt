@@ -1,8 +1,11 @@
-package com.anisanurjanah.fahrameducation
+package com.anisanurjanah.fahrameducationcourse.favorite
 
 import android.app.Application
-import com.anisanurjanah.fahrameducation.di.*
-import com.anisanurjanah.fahrameducationcourse.core.di.*
+import com.anisanurjanah.fahrameducationcourse.core.di.databaseModule
+import com.anisanurjanah.fahrameducationcourse.core.di.networkModule
+import com.anisanurjanah.fahrameducationcourse.core.di.repositoryModule
+import com.anisanurjanah.fahrameducationcourse.favorite.di.useCaseModule
+import com.anisanurjanah.fahrameducationcourse.favorite.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin

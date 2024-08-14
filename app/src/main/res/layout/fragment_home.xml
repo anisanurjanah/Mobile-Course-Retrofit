@@ -2,32 +2,117 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.anisanurjanah.fahrameducation.MainActivity">
+    android:background="@color/light_grey"
+    tools:context="com.anisanurjanah.fahrameducationcourse.MainActivity">
 
-    <ProgressBar
-        android:id="@+id/progress_bar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="240dp"
+        android:src="@drawable/img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rounded_white_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageLogo" />
+
+    <ImageButton
+        android:id="@+id/coursesButton"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/transparent"
+        android:padding="16dp"
+        android:src="@drawable/ic_school"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:tint="?attr/colorPrimaryVariant"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
+    <ImageButton
+        android:id="@+id/articlesButton"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/transparent"
+        android:padding="16dp"
+        android:src="@drawable/ic_article"
+        app:layout_constraintBottom_toBottomOf="@+id/taskButton"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/taskButton"
+        app:tint="?attr/colorPrimaryVariant"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
+    <ImageButton
+        android:id="@+id/taskButton"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="@color/transparent"
+        android:padding="16dp"
+        android:src="@drawable/ic_list"
+        app:layout_constraintBottom_toBottomOf="@+id/coursesButton"
+        app:layout_constraintEnd_toStartOf="@+id/articlesButton"
+        app:layout_constraintStart_toEndOf="@+id/coursesButton"
+        app:layout_constraintTop_toTopOf="@+id/coursesButton"
+        app:tint="?attr/colorPrimaryVariant"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/tvTask"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/task"
+        android:textAlignment="center"
+        android:textColor="?attr/colorPrimaryVariant"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/taskButton"
+        app:layout_constraintStart_toStartOf="@+id/taskButton"
+        app:layout_constraintTop_toBottomOf="@+id/taskButton" />
 
-    <include
-        android:id="@+id/view_error"
-        layout="@layout/view_error"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tvCourse"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/course"
+        android:textAlignment="center"
+        android:textColor="?attr/colorPrimaryVariant"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/coursesButton"
+        app:layout_constraintStart_toStartOf="@+id/coursesButton"
+        app:layout_constraintTop_toBottomOf="@+id/coursesButton" />
+
+    <TextView
+        android:id="@+id/tvArticle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/article"
+        android:textAlignment="center"
+        android:textColor="?attr/colorPrimaryVariant"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/articlesButton"
+        app:layout_constraintStart_toStartOf="@+id/articlesButton"
+        app:layout_constraintTop_toBottomOf="@+id/articlesButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,6 +13,10 @@
             android:icon="@drawable/ic_school"
             android:title="@string/course" />
         <item
+            android:id="@+id/nav_task"
+            android:icon="@drawable/ic_list"
+            android:title="@string/task" />
+        <item
             android:id="@+id/nav_article"
             android:icon="@drawable/ic_article"
             android:title="@string/article" />

@@ -1,4 +1,4 @@
-package com.anisanurjanah.fahrameducation.course
+package com.anisanurjanah.fahrameducationcourse.course
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData

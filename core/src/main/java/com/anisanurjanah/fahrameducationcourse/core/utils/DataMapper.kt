@@ -1,7 +1,7 @@
 package com.anisanurjanah.fahrameducationcourse.core.utils
 
 import com.anisanurjanah.fahrameducationcourse.core.data.source.local.entity.CourseEntity
-import com.anisanurjanah.fahrameducationcourse.core.data.source.remote.response.CourseItem
+import com.anisanurjanah.fahrameducationcourse.core.data.source.remote.response.course.CourseItem
 import com.anisanurjanah.fahrameducationcourse.core.domain.model.Course
 
 object DataMapper {
