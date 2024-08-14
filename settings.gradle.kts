@@ -21,3 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Fahram Education"
 include(":app")
+include(":core")
+include(":favorite")
