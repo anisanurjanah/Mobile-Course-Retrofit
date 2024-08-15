@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import com.anisanurjanah.fahrameducationcourse.course.CourseFragment
 import com.anisanurjanah.fahrameducationcourse.databinding.ActivityMainBinding
 import com.anisanurjanah.fahrameducationcourse.home.HomeFragment
+import com.bumptech.glide.Glide
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {

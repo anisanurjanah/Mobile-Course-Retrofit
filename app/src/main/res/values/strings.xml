@@ -3,6 +3,8 @@
 
     <string name="home">Home</string>
     <string name="course">Course</string>
+    <string name="article">Article</string>
+    <string name="task">Task</string>
     <string name="favorite">Favorite</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -10,14 +12,12 @@
 
     <string name="no_data">No data available.</string>
     <string name="something_wrong">Oops.. something went wrong</string>
-    <string name="article">Article</string>
+    <string name="coming_soon">Coming soon!</string>
+
     <string name="teacher">Teacher</string>
     <string name="path">Path</string>
     <string name="slug">Slug</string>
     <string name="view">View</string>
     <string name="level">Level</string>
     <string name="module">Module</string>
-    <string name="coming_soon">Coming soon!</string>
-    <string name="task">Task</string>
-    <string name="login">Login</string>
 </resources>
