@@ -10,7 +10,6 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation(libs.androidx.legacy.support.v4)
-    implementation(libs.androidx.cardview)
     implementation(libs.androidx.recyclerview)
     implementation(libs.glide)
 
