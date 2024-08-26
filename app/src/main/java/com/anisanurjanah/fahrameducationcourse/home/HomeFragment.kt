@@ -9,11 +9,8 @@ import androidx.fragment.app.Fragment
 import com.anisanurjanah.fahrameducationcourse.R
 import com.anisanurjanah.fahrameducationcourse.databinding.FragmentHomeBinding
 import com.bumptech.glide.Glide
-import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeFragment : Fragment() {
-
-    private val homeViewModel: HomeViewModel by viewModel()
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
