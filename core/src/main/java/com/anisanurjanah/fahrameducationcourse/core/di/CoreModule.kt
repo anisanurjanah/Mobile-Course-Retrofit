@@ -9,6 +9,9 @@ import com.anisanurjanah.fahrameducationcourse.core.data.source.remote.RemoteDat
 import com.anisanurjanah.fahrameducationcourse.core.data.source.remote.network.ApiService
 import com.anisanurjanah.fahrameducationcourse.core.domain.repository.ICourseRepository
 import com.anisanurjanah.fahrameducationcourse.core.utils.AppExecutors
+import net.sqlcipher.database.SQLiteDatabase
+import net.sqlcipher.database.SupportFactory
+import okhttp3.CertificatePinner
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
@@ -20,19 +23,30 @@ import java.util.concurrent.TimeUnit
 val databaseModule = module {
     factory { get<CourseDatabase>().courseDao() }
     single {
+        val passphrase: ByteArray = SQLiteDatabase.getBytes("neilr27".toCharArray())
+        val factory = SupportFactory(passphrase)
         Room.databaseBuilder(
             androidContext(),
             CourseDatabase::class.java, "Course.db"
-        ).fallbackToDestructiveMigration().build()
+        ).fallbackToDestructiveMigration()
+            .openHelperFactory(factory)
+            .build()
     }
 }
 
 val networkModule = module {
     single {
+        val hostname = "fahram.dev"
+        val certificatePinner = CertificatePinner.Builder()
+            .add(hostname, "sha256/+uMZCNRTm1erwPmPlRf0o+oIqPGmm4PqDg8S7S0kPjg=")
+            .add(hostname, "sha256/kIdp6NNEd8wsugYyyIYFsi1ylMCED3hZbSR8ZFsa/A4=")
+            .add(hostname, "sha256/mEflZT5enoR1FuXLgYYGqnVEoZvmf9c2bVBpiOjYQ0c=")
+            .build()
         OkHttpClient.Builder()
             .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
             .connectTimeout(120, TimeUnit.SECONDS)
             .readTimeout(120, TimeUnit.SECONDS)
+            .certificatePinner(certificatePinner)
             .build()
     }
     single {
