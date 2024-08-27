@@ -16,4 +16,6 @@ dependencies {
     implementation(libs.koin.core)
     implementation(libs.koin.android)
 //    implementation(libs.koin.android.viewmodel)
+
+    debugImplementation(libs.leakcanary.android)
 }
