@@ -19,3 +19,26 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# Please add these rules to your existing keep rules in order to suppress warnings.
+# This is generated automatically by the Android Gradle plugin.
+-dontwarn com.anisanurjanah.fahrameducationcourse.core.data.source.Resource$Error
+-dontwarn com.anisanurjanah.fahrameducationcourse.core.data.source.Resource$Loading
+-dontwarn com.anisanurjanah.fahrameducationcourse.core.data.source.Resource$Success
+-dontwarn com.anisanurjanah.fahrameducationcourse.core.data.source.Resource
+-dontwarn com.anisanurjanah.fahrameducationcourse.core.di.CoreModuleKt
+-dontwarn com.anisanurjanah.fahrameducationcourse.core.domain.model.Course
+-dontwarn com.anisanurjanah.fahrameducationcourse.core.domain.repository.ICourseRepository
+-dontwarn com.anisanurjanah.fahrameducationcourse.core.domain.usecase.CourseInteractor
+-dontwarn com.anisanurjanah.fahrameducationcourse.core.domain.usecase.CourseUseCase
+-dontwarn com.anisanurjanah.fahrameducationcourse.core.ui.CourseAdapter
+
+-dontwarn java.lang.invoke.StringConcatFactory
+
+-keep class com.anisanurjanah.fahrameducationcourse.core.** { *; }
+-keepclassmembers class com.anisanurjanah.fahrameducationcourse.core.** { *; }
+
+-dontwarn java.lang.invoke.MethodHandles$Lookup
+-keepclassmembers class java.lang.invoke.MethodHandles$Lookup {
+    <methods>;
+}
