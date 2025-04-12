@@ -21,6 +21,12 @@ This project is a simple Android application built using Kotlin and Retrofit to 
 - Display data in a list using RecyclerView
 - Clean MVVM architecture
 
+## 🌐 API Source
+
+This project uses a dummy REST API provided by:
+
+**➡️ [https://fahram.dev/](https://fahram.dev/)**
+
 ## 🚀 Getting Started
 
 To run this project locally:
