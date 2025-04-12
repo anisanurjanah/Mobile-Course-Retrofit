@@ -40,14 +40,14 @@ To run this project locally:
 ## 📸 Screenshots
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/7e3dc7df-0277-4899-bc43-a22ecb14ec84" width="30%"/>
-    <img src="https://github.com/user-attachments/assets/afcdd5d8-1a80-443b-92b1-81b8cfe94d61" width="30%"/>
-    <img src="https://github.com/user-attachments/assets/3947236b-b4e6-4f46-8ace-da6fdcf01478" width="30%"/>
+    <img src="https://github.com/user-attachments/assets/7e3dc7df-0277-4899-bc43-a22ecb14ec84" width="20%"/>
+    <img src="https://github.com/user-attachments/assets/afcdd5d8-1a80-443b-92b1-81b8cfe94d61" width="20%"/>
+    <img src="https://github.com/user-attachments/assets/3947236b-b4e6-4f46-8ace-da6fdcf01478" width="20%"/>
 </p>
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/dfe663fc-0e78-4210-beb7-b536e3ddacae" width="30%"/>
-    <img src="https://github.com/user-attachments/assets/291a6241-37bf-49ba-a265-9f1c5d7643ea" width="30%"/>
+    <img src="https://github.com/user-attachments/assets/dfe663fc-0e78-4210-beb7-b536e3ddacae" width="20%"/>
+    <img src="https://github.com/user-attachments/assets/291a6241-37bf-49ba-a265-9f1c5d7643ea" width="20%"/>
 </p>
 
 ## 🎓 Acknowledgement
