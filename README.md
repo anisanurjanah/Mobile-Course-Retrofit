@@ -50,6 +50,13 @@ To run this project locally:
     <img src="https://github.com/user-attachments/assets/291a6241-37bf-49ba-a265-9f1c5d7643ea" width="30%"/>
 </p>
 
+## 🎓 Acknowledgement
+
+This project is part of the [Dicoding Academy](https://www.dicoding.com/academies) Android Developer Learning Path.  
+Completed as a submission for the course:
+
+- **Menjadi Android Developer Expert**
+
 ## 📝 License
 
 This project is for learning and educational purposes only.
