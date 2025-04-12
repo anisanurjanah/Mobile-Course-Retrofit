@@ -59,4 +59,4 @@ Completed as a submission for the course:
 
 ## 📝 License
 
-This project is for learning and educational purposes only.
+This project was developed as part of a course submission and is intended for educational purposes only.
