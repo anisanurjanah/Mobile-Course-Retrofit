@@ -7,7 +7,8 @@
 
 ## 📌 Description
 
-This project is a simple Android application built using Kotlin and Retrofit to consume data from a RESTful API. It was developed as part of an android learning module focused on mastering data fetching and integration.
+This project is a simple Android application built using Kotlin and Retrofit to consume data from a RESTful API. It was developed as part of an Android Learning Path module on Dicoding.
+Focused on mastering data fetching and integration.
 
 ## ⚙️ Tech Stack
 
